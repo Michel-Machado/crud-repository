@@ -1,4 +1,4 @@
-package com.estudos.crud.models;
+package com.estudos.crud.models.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,10 +13,8 @@ import lombok.NoArgsConstructor;
 public class ProdutoModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String descricao;
     private Double preco;
-
-
 }

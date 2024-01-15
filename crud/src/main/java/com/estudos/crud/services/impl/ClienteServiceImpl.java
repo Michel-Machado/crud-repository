@@ -1,6 +1,6 @@
 package com.estudos.crud.services.impl;
 
-import com.estudos.crud.models.ClienteModel;
+import com.estudos.crud.models.entities.ClienteModel;
 import com.estudos.crud.models.dto.ClienteDTO;
 import com.estudos.crud.repositories.ClienteRepository;
 import com.estudos.crud.services.ClienteService;
@@ -17,10 +17,10 @@ public class ClienteServiceImpl implements ClienteService {
      private ClienteRepository clienteRepository;
 
     @Override
-    public List<ClienteDTO> getAllClientes() {
+    public List<ClienteModel> getAllClientes() {
 
      List<ClienteModel> clienteModels =  clienteRepository.findAll();
-     return  clienteModels.stream().map(ClienteDTO::new).toList();
+     return  clienteModels;
     }
 
     @Override
@@ -45,6 +45,11 @@ public class ClienteServiceImpl implements ClienteService {
     public ClienteDTO cadastraCliente(ClienteModel clienteModel) {
         return new ClienteDTO(clienteRepository.save(clienteModel));
 
+    }
+    @Override
+    public ClienteDTO alteraCliente(ClienteModel clienteModel){
+
+        return new ClienteDTO( clienteRepository.save(clienteModel));
     }
 
 

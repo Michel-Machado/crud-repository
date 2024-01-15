@@ -1,6 +1,6 @@
 package com.estudos.crud.repositories;
 
-import com.estudos.crud.models.ProdutoModel;
+import com.estudos.crud.models.entities.ProdutoModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

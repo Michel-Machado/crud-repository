@@ -1,14 +1,12 @@
 package com.estudos.crud.services;
 
-import com.estudos.crud.models.ClienteModel;
+import com.estudos.crud.models.entities.ClienteModel;
 import com.estudos.crud.models.dto.ClienteDTO;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ClienteService {
-    List<ClienteDTO> getAllClientes();
+    List<ClienteModel> getAllClientes();
 
 
     ClienteDTO getClienteById(Long id);
@@ -16,4 +14,6 @@ public interface ClienteService {
     void deleteClienteByid(Long id);
 
     ClienteDTO cadastraCliente(ClienteModel clientModel);
+
+    ClienteDTO alteraCliente(ClienteModel clienteModel);
 }

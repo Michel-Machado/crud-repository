@@ -1,4 +1,4 @@
-package com.estudos.crud.models;
+package com.estudos.crud.models.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -15,8 +15,9 @@ import lombok.NoArgsConstructor;
 public class ClienteModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @NotBlank
     private String nome;
     @Email

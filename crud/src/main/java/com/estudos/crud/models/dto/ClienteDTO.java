@@ -1,7 +1,6 @@
 package com.estudos.crud.models.dto;
 
-import com.estudos.crud.models.ClienteModel;
-import jakarta.persistence.*;
+import com.estudos.crud.models.entities.ClienteModel;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -11,8 +10,10 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class ClienteDTO {
+
+    private Long id;
+
     @NotBlank
     @NotEmpty
     private String nome;
@@ -21,8 +22,12 @@ public class ClienteDTO {
     @NotEmpty
     private String email;
 
+    public ClienteDTO(Long id, String nome, String email) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+    }
+
     public ClienteDTO(ClienteModel clienteModel) {
-        nome = clienteModel.getNome();
-        email = clienteModel.getEmail();
     }
 }
