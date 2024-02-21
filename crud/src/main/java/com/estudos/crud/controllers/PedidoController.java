@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "crud-repository-production.up.railway.app")
+@CrossOrigin("*")
 @RequestMapping("/pedido")
 public class PedidoController {
 
