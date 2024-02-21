@@ -19,6 +19,7 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
+
     @GetMapping
     public ResponseEntity<List<ClienteModel>> buscaClientes(){
       List<ClienteModel> clientes=  clienteService.getAllClientes();
