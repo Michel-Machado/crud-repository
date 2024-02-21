@@ -29,5 +29,8 @@ public class ClienteDTO {
     }
 
     public ClienteDTO(ClienteModel clienteModel) {
+        id = clienteModel.getId();
+        nome = clienteModel.getNome();
+        email = clienteModel.getEmail();
     }
 }
