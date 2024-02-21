@@ -30,7 +30,6 @@ public class PedidoController {
     private ClienteRepository clienteRepository;
 
 
-
     @GetMapping
     public ResponseEntity<List<PedidoDTO>> buscaPedido(){
 
