@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin(origins = "crud-repository-production.up.railway.app")
 @RequestMapping("/produto")
 public class ProdutoController {
 
